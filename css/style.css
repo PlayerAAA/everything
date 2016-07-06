@@ -1,0 +1,15 @@
+.w3-center {
+  text-align: center;
+}
+
+body {
+  background-color: #FF4136;
+}
+
+ .hidden {
+   display: none;
+ }
+
+ .showhover:hover + div {
+   display: block;
+ }
