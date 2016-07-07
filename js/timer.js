@@ -99,8 +99,8 @@ function stopTimer() {
 }
 
 function resetTimer() {
-  s = 0;
-  m = 0;
-  h = 0;
+  s = "0";
+  m = "0";
+  h = "0";
   displayTimer();
 }
