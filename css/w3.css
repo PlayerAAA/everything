@@ -194,7 +194,7 @@ input[type=checkbox].w3-check:disabled+.w3-validate,input[type=radio].w3-radio:d
 .w3-margin{margin:16px!important}.w3-margin-0{margin:0!important}
 .w3-margin-top{margin-top:16px!important}.w3-margin-bottom{margin-bottom:16px!important}
 .w3-margin-left{margin-left:16px!important}.w3-margin-right{margin-right:16px!important}
-.w3-section{margin-top:16px!important;margin-bottom:16px!important}
+.w3-section{margin-top:16px!important;/*margin-bottom:16px!important*/}
 .w3-padding-tiny{padding:2px 4px!important}.w3-padding-small{padding:4px 8px!important}
 .w3-padding-medium,.w3-padding,.w3-form{padding:8px 16px!important}
 .w3-padding-large{padding:12px 24px!important}.w3-padding-xlarge{padding:16px 32px!important}
@@ -219,7 +219,7 @@ input[type=checkbox].w3-check:disabled+.w3-validate,input[type=radio].w3-radio:d
 0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}
 @keyframes w3-spin{
 0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}
-.w3-container{padding:0.01em 16px}
+.w3-container{/*padding:0.01em 16px*/}
 .w3-example{background-color:#f1f1f1;padding:0.01em 16px}
 .w3-code{font-family:Consolas,"courier new";font-size:16px;line-height:1.4;width:auto;background-color:#fff;padding:8px 12px;border-left:4px solid #009688;word-wrap:break-word}
 .w3-example,.w3-code,.w3-reference{margin:20px 0}

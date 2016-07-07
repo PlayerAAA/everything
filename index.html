@@ -6,6 +6,7 @@
     <title>Everything - everything you'll want is here.</title>
     <link rel="stylesheet" href="css/w3.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+    <script src="js/jquery.js" charset="utf-8"></script>
   </head>
   <body>
     <div class="w3-row w3-container">
@@ -44,9 +45,9 @@
         <input id="counter" type="text" name="name" value="00:00:00" readonly="readonly" class="w3-text-grey w3-center">
         <br>
         <p>                     </p>
-        <input id="start" type="button" name="name" value="Start!" class="w3-btn w3-green" onclick="chrono()">
+        <input id="start" type="button" name="name" value="Start!" class="w3-btn w3-green">
         <!-- <input type="button" name="name" value="Stop!" class="w3-btn w3-red" onclick="stopChrono()"> -->
-        <input id="reset" type="button" name="name" value="Reset!" class="w3-btn w3-blue" onclick="resetChrono()">
+        <input id="reset" type="button" name="name" value="Reset!" class="w3-btn w3-blue">
         <p>                                           </p>
       </div>
       <div class="w3-col m3 w3-text-red">
@@ -54,16 +55,17 @@
       </div>
     </div>
 
-    <div id="tempwin" class="w3-container w3-row w3-section">
+   <div id="tempwin" class="w3-container w3-row w3-section">
       <div class="w3-col m3 w3-text-red">
         <p>     </p>
       </div>
       <div class="w3-col m6 w3-center w3-xlarge w3-white w3-text-red showhover">
         <p>
-          Temporizer
+          Timer
           <input type="button" value="+" id="opentemp" class="w3-btn-floating w3-red" style="right:5%; float:right; border:none"></input>
         </p>
       </div>
+
       <div class="w3-col m3 w3-text-red">
         <p>              </p>
       </div>
@@ -73,12 +75,17 @@
         <p>     </p>
       </div>
       <div class="w3-col s 12 m6 w3-center w3-white w3-text-grey">
+        <div class="inputemp">
         <p>                                   </p>
-        <input id="userChoiceH" type="text" name="name" value="00:00:00" class="w3-text-grey w3-center">
-        <br>
+        <input id="userChoiceH" type="text" name="name" value="00" class="w3-text-grey w3-center" maxlength="2" style="width: 10%" onclick="clearInputs(0)" onblur="restoreInputs(0)"> :
+        <input id="userChoiceM" type="text" name="name" value="00" class="w3-text-grey w3-center" maxlength="2" style="width: 10%" onclick="clearInputs(1)" onblur="restoreInputs(1)"> :
+        <input id="userChoiceS" type="text" name="name" value="00" class="w3-text-grey w3-center" maxlength="2"  style="width: 10%" onclick="clearInputs(2)" onblur="restoreInputs(2)">
+        <p>            </p>
+        <input id="timer" type="text" name="name" value="00:00:00" class="w3-text-grey w3-center" readonly="readonly">
+        </div>
         <p>                     </p>
-        <input id="start" type="button" name="name" value="Start!" class="w3-btn w3-green" onclick="chrono()">
-        <input id="reset" type="button" name="name" value="Reset!" class="w3-btn w3-blue" onclick="resetChrono()">
+        <input id="startTime" type="button" name="name" value="Start!" class="w3-btn w3-green" >
+        <input id="resetTime" type="button" name="name" value="Reset!" class="w3-btn w3-blue" >
         <p>                                           </p>
       </div>
       <div class="w3-col m3 w3-text-red">
@@ -86,7 +93,7 @@
       </div>
     </div>
 
-    <script src="js/jquery.js" charset="utf-8"></script>
-    <script src="js/chronometer.js" charset="utf-8"></script>
+  <script src="js/chronometer.js" charset="utf-8"></script>
+  <script src="js/timer.js" charset="utf-8"></script>
   </body>
 </html>

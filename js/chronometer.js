@@ -63,34 +63,53 @@ $('#openchrono').click(function() {
     }
 });
 
-$('#start').on('click', function (e) {
-    $(this).attr('value', function (_, text) {
-        $(this).attr("class", "w3-btn w3-red");
-        return text === 'Stop!' ? 'Start!' : 'Stop!';
-    		});
-     if ($(this).attr('onclick') == 'chrono()') {
-     $(this).attr('onclick', 'stopChrono()');
-     } else {
-     $(this).attr('onclick', 'chrono()');
-     $(this).attr('class', 'w3-btn w3-green');
-     }
+
+
+
+$('#start').on('click', function(e) {
+  $(this).attr('value', function(_, text) {
+    if (text === 'Stop!') {
+      $(this).attr('class', 'w3-btn w3-green');
+      stopChrono();
+      return 'Start!';
+    } else {
+      $(this).attr("class", "w3-btn w3-red");
+      chrono();
+      return 'Stop!';
+    }
+  });
 });
 
-function stopChrono() {
-    clearInterval(chronometer);
-    $(this).attr('class', 'w3-btn w3-green');
-    $('#start').off('click', stopChrono);
-    $('#start').on('click', startChrono);
-}
 
-function startChrono(e) {
-    $(this).attr('value', 'Stop!')
-    $(this).attr("class", "w3-btn w3-red")
-    $('#start').off('click', startChrono);
-    $('#start').on('click', stopChrono);
-}
 
-$('#start').on('click', startChrono);
+// $('#start').on('click', function (e) {
+//     $(this).attr('value', function (_, text) {
+//         $(this).attr("class", "w3-btn w3-red");
+//         return text === 'Stop!' ? 'Start!' : 'Stop!';
+//     		});
+//      if ($(this).attr('onclick') == 'chrono()') {
+//      $(this).attr('onclick', 'stopChrono()');
+//      } else {
+//      $(this).attr('onclick', 'chrono()');
+//      $(this).attr('class', 'w3-btn w3-green');
+//      }
+// });
+//
+// function stopChrono() {
+//     clearInterval(chronometer);
+//     $(this).attr('class', 'w3-btn w3-green');
+//     $('#start').off('click', stopChrono);
+//     $('#start').on('click', startChrono);
+// }
+//
+// function startChrono(e) {
+//     $(this).attr('value', 'Stop!')
+//     $(this).attr("class", "w3-btn w3-red")
+//     $('#start').off('click', startChrono);
+//     $('#start').on('click', stopChrono);
+// }
+//
+// $('#start').on('click', startChrono);
 
 
 
