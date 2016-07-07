@@ -49,6 +49,17 @@ $('#startTime').on('click', function(e) {
   });
 });
 
+$('#opentemp').click(function() {
+    if ($(this).attr('value') == '+') {
+        $(this).attr('value', '-');
+        $('#timerwin').slideDown();
+    } else {
+        $(this).attr('value', '+');
+        $('#timerwin').slideUp();
+    }
+});
+
+
 function startTimer() {
   for (var i = 0; i < userChoiceses.length; i++) {
     if (userChoiceses[i].value < 10 & userChoiceses[i].value != 00 & userChoiceses[i].value.length != 2) {
